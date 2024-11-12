@@ -4,6 +4,7 @@ public class Book {
     private String name, author;
     private String status = "Available";
     static int count = 0;
+    static int borrowedCount = 0;
 
     Book(String name, String author) {
         this.name = name;
@@ -25,6 +26,7 @@ public class Book {
 
     void changeStatus() {
         this.status = "Borrowed";
+        borrowedCount++;
     }
 
 }
